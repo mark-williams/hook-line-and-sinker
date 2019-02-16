@@ -15,7 +15,7 @@ describe('counter', () => {
   describe('when clicked', () => {
     const wrapper = shallow(<Counter />);
     it(' displays incremented count', () => {
-      const button = wrapper.find('button');
+      const button = wrapper.find('Button');
       expect(getDisplayedCount(wrapper)).toContain('0');
 
       button.simulate('click');
