@@ -1,4 +1,15 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Button = styled.button`
+  background-color: hsl(250, 40%, 50%);
+  color: white;
+  min-width: 4rem;
+  padding: 0.4em 0.6rem;
+  font-size: 1.4rem;
+  border-radius: 0.4em;
+`;
+Button.displayName = 'Button';
 
 class Counter extends React.Component {
   state = { count: 0 };
@@ -7,7 +18,7 @@ class Counter extends React.Component {
   render = () => {
     const { count } = this.state;
 
-    return <button onClick={this.onClick}>{count}</button>;
+    return <Button onClick={this.onClick}>{count}</Button>;
   };
 }
 

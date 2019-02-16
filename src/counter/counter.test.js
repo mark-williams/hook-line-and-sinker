@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Counter from './counter';
 
-const getDisplayedCount = wrapper => wrapper.find('button').text();
+const getDisplayedCount = wrapper => wrapper.find('Button').text();
 
 describe('counter', () => {
   describe('when initially rendered', () => {
@@ -16,7 +16,7 @@ describe('counter', () => {
     const wrapper = shallow(<Counter />);
     it(' displays incremented count', () => {
       const button = wrapper.find('button');
-      expect(button.text()).toContain('0');
+      expect(getDisplayedCount(wrapper)).toContain('0');
 
       button.simulate('click');
       expect(getDisplayedCount(wrapper)).toContain('1');
