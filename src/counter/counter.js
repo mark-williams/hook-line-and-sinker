@@ -6,7 +6,8 @@ class Counter extends React.Component {
   onClick = () => this.setState(state => ({ count: state.count + 1 }));
   render = () => {
     const { count } = this.state;
-    <button onClick={this.onClick}>{count}</button>;
+
+    return <button onClick={this.onClick}>{count}</button>;
   };
 }
 
