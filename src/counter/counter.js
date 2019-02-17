@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const Button = styled.button`
@@ -11,15 +11,13 @@ const Button = styled.button`
 `;
 Button.displayName = 'Button';
 
-class Counter extends React.Component {
-  state = { count: 0 };
-
-  onClick = () => this.setState(state => ({ count: state.count + 1 }));
-  render = () => {
-    const { count } = this.state;
-
-    return <Button onClick={this.onClick}>{count}</Button>;
+const Counter = () => {
+  const [count, setCount] = useState(0);
+  const incrementCount = () => {
+    setCount(count + 1);
   };
-}
+
+  return <Button onClick={incrementCount}>{count}</Button>;
+};
 
 export default Counter;
