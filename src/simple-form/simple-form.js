@@ -23,19 +23,21 @@ const FormItem = styled.div`
   }
 `;
 
-const SimpleForm = () => {
-  return (
-    <FormWrapper>
-      <FormItem>
-        <label htmlFor="first-name">First name</label>
-        <input id="first-name" type="text" />
-      </FormItem>
-      <FormItem>
-        <label htmlFor="second-name">Second name</label>
-        <input id="second-name" type="text" />
-      </FormItem>
-    </FormWrapper>
-  );
-};
+class SimpleForm extends React.Component {
+  render = () => {
+    return (
+      <FormWrapper>
+        <FormItem>
+          <label htmlFor="first-name">First name</label>
+          <input id="first-name" type="text" />
+        </FormItem>
+        <FormItem>
+          <label htmlFor="second-name">Second name</label>
+          <input id="second-name" type="text" />
+        </FormItem>
+      </FormWrapper>
+    );
+  };
+}
 
 export default SimpleForm;
