@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const Button = styled.button`
@@ -12,7 +12,9 @@ const Button = styled.button`
 Button.displayName = 'Button';
 
 const Counter = () => {
-  return <Button>{0}</Button>;
+  const [count, setCount] = useState(0);
+  const incrementCount = () => setCount(count + 1);
+  return <Button onClick={incrementCount}>{count}</Button>;
 };
 
 export default Counter;
