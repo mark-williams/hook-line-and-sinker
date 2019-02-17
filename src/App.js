@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import logo from './logo.svg';
 import './App.css';
-import Counter from './counter/counter';
+import Root from './root/root';
 
 const Container = styled.div`
   padding: 2rem;
@@ -16,7 +16,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
         </header>
         <Container>
-          <Counter />
+          <Root />
         </Container>
       </div>
     );
