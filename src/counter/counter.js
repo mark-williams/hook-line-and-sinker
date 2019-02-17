@@ -11,15 +11,8 @@ const Button = styled.button`
 `;
 Button.displayName = 'Button';
 
-class Counter extends React.Component {
-  state = { count: 0 };
-
-  onClick = () => this.setState(state => ({ count: state.count + 1 }));
-  render = () => {
-    const { count } = this.state;
-
-    return <Button onClick={this.onClick}>{count}</Button>;
-  };
-}
+const Counter = () => {
+  return <Button>{0}</Button>;
+};
 
 export default Counter;
