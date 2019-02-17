@@ -35,7 +35,7 @@ describe('simple-form', () => {
         getWrapperByName(wrapper, 'secondName').simulate('change', {
           target: { name: 'secondName', value: 'Liverpool' }
         });
-        console.log(wrapper.html());
+
         expect(getValueOfInput(wrapper, 'secondName')).toBe('Liverpool');
       });
     });
