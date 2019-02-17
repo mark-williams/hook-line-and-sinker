@@ -23,39 +23,24 @@ const FormItem = styled.div`
   }
 `;
 
-const SimpleForm = () => {
-  const [firstName, setFirstName] = useState('');
-  const [secondName, setSecondName] = useState('');
+const useFormInput = () => {
+  const [value, setValue] = useState('');
+  return { value, onChange: e => setValue(e.target.value) };
+};
 
-  const onChange = e => {
-    const { name, value } = e.target;
-    if (name === 'firstName') {
-      setFirstName(value);
-    } else {
-      setSecondName(value);
-    }
-  };
+const SimpleForm = () => {
+  const first = useFormInput();
+  const second = useFormInput();
+
   return (
     <FormWrapper>
       <FormItem>
         <label htmlFor="first-name">First name</label>
-        <input
-          id="first-name"
-          name="firstName"
-          type="text"
-          onChange={onChange}
-          value={firstName}
-        />
+        <input id="first-name" name="firstName" type="text" {...first} />
       </FormItem>
       <FormItem>
         <label htmlFor="second-name">Second name</label>
-        <input
-          id="second-name"
-          name="secondName"
-          type="text"
-          onChange={onChange}
-          value={secondName}
-        />
+        <input id="second-name" name="secondName" type="text" {...second} />
       </FormItem>
     </FormWrapper>
   );
