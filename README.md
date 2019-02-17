@@ -7,3 +7,6 @@ Trivial little component - a button that displays the number of times it has bee
 Refactored _counter_ to a functional component, bringing in _useState_ to manage its state (count value). Had to amend the tests to use _mount_ instead of _shallow_ as enzyme's _shallow_ does not appear to support hooks yet:
 
 https://github.com/reactjs/rfcs/issues/71
+
+## Simple Form
+A (very!) simple form implemented first as a class managing its own state. Then refactored to first use _useState_ for each input element, subsequently refactored to use a custom hook to manage each input generically.
