@@ -32,9 +32,10 @@ describe('simple-form', () => {
       });
 
       it('when text input this should be rendered', () => {
-        getWrapperByName(wrapper, 'firstName').simulate('change', {
+        getWrapperByName(wrapper, 'secondName').simulate('change', {
           target: { name: 'secondName', value: 'Liverpool' }
         });
+        console.log(wrapper.html());
         expect(getValueOfInput(wrapper, 'secondName')).toBe('Liverpool');
       });
     });
