@@ -13,7 +13,10 @@ Button.displayName = 'Button';
 
 const Counter = () => {
   const [count, setCount] = useState(0);
-  const incrementCount = () => setCount(count + 1);
+  const incrementCount = () => {
+    setCount(count + 1);
+  };
+
   return <Button onClick={incrementCount}>{count}</Button>;
 };
 
