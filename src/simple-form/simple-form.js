@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const FormWrapper = styled.div`
@@ -23,43 +23,42 @@ const FormItem = styled.div`
   }
 `;
 
-class SimpleForm extends React.Component {
-  state = {
-    firstName: '',
-    secondName: ''
-  };
+const SimpleForm = () => {
+  const [firstName, setFirstName] = useState('');
+  const [secondName, setSecondName] = useState('');
 
-  onChange = e => {
+  const onChange = e => {
     const { name, value } = e.target;
-    this.setState({ [name]: value });
+    if (name === 'firstName') {
+      setFirstName(value);
+    } else {
+      setSecondName(value);
+    }
   };
-  render = () => {
-    const { firstName, secondName } = this.state;
-    return (
-      <FormWrapper>
-        <FormItem>
-          <label htmlFor="first-name">First name</label>
-          <input
-            id="first-name"
-            name="firstName"
-            type="text"
-            onChange={this.onChange}
-            value={firstName}
-          />
-        </FormItem>
-        <FormItem>
-          <label htmlFor="second-name">Second name</label>
-          <input
-            id="second-name"
-            name="secondName"
-            type="text"
-            onChange={this.onChange}
-            value={secondName}
-          />
-        </FormItem>
-      </FormWrapper>
-    );
-  };
-}
+  return (
+    <FormWrapper>
+      <FormItem>
+        <label htmlFor="first-name">First name</label>
+        <input
+          id="first-name"
+          name="firstName"
+          type="text"
+          onChange={onChange}
+          value={firstName}
+        />
+      </FormItem>
+      <FormItem>
+        <label htmlFor="second-name">Second name</label>
+        <input
+          id="second-name"
+          name="secondName"
+          type="text"
+          onChange={onChange}
+          value={secondName}
+        />
+      </FormItem>
+    </FormWrapper>
+  );
+};
 
 export default SimpleForm;
