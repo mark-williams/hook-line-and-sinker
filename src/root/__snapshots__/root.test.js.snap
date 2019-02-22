@@ -30,6 +30,10 @@ ShallowWrapper {
           />
           <Route
             component={[Function]}
+            path="/complex-form"
+          />
+          <Route
+            component={[Function]}
           />
         </Switch>
       </BrowserRouter>,
@@ -51,6 +55,10 @@ ShallowWrapper {
           />
           <Route
             component={[Function]}
+            path="/complex-form"
+          />
+          <Route
+            component={[Function]}
           />
         </Switch>,
       },
@@ -68,6 +76,10 @@ ShallowWrapper {
             <Route
               component={[Function]}
               path="/simple-form"
+            />,
+            <Route
+              component={[Function]}
+              path="/complex-form"
             />,
             <Route
               component={[Function]}
@@ -95,6 +107,18 @@ ShallowWrapper {
             "props": Object {
               "component": [Function],
               "path": "/simple-form",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "path": "/complex-form",
             },
             "ref": null,
             "rendered": null,
@@ -136,6 +160,10 @@ ShallowWrapper {
             />
             <Route
               component={[Function]}
+              path="/complex-form"
+            />
+            <Route
+              component={[Function]}
             />
           </Switch>
         </BrowserRouter>,
@@ -157,6 +185,10 @@ ShallowWrapper {
             />
             <Route
               component={[Function]}
+              path="/complex-form"
+            />
+            <Route
+              component={[Function]}
             />
           </Switch>,
         },
@@ -174,6 +206,10 @@ ShallowWrapper {
               <Route
                 component={[Function]}
                 path="/simple-form"
+              />,
+              <Route
+                component={[Function]}
+                path="/complex-form"
               />,
               <Route
                 component={[Function]}
@@ -201,6 +237,18 @@ ShallowWrapper {
               "props": Object {
                 "component": [Function],
                 "path": "/simple-form",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "path": "/complex-form",
               },
               "ref": null,
               "rendered": null,

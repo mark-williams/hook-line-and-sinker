@@ -31,6 +31,9 @@ const Home = () => (
         <li>
           <Link to="/simple-form">Simple Form</Link>
         </li>
+        <li>
+          <Link to="/complex-form">Complex Form</Link>
+        </li>
       </ul>
     </MenuContainer>
   </Fragment>

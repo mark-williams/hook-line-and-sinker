@@ -43,6 +43,14 @@ ShallowWrapper {
                 Simple Form
               </Link>
             </li>
+            <li>
+              <Link
+                replace={false}
+                to="/complex-form"
+              >
+                Complex Form
+              </Link>
+            </li>
           </ul>
         </ForwardRef>,
       ],
@@ -93,6 +101,14 @@ ShallowWrapper {
                 Simple Form
               </Link>
             </li>
+            <li>
+              <Link
+                replace={false}
+                to="/complex-form"
+              >
+                Complex Form
+              </Link>
+            </li>
           </ul>,
         },
         "ref": null,
@@ -116,6 +132,14 @@ ShallowWrapper {
                   to="/simple-form"
                 >
                   Simple Form
+                </Link>
+              </li>,
+              <li>
+                <Link
+                  replace={false}
+                  to="/complex-form"
+                >
+                  Complex Form
                 </Link>
               </li>,
             ],
@@ -174,6 +198,34 @@ ShallowWrapper {
                 },
                 "ref": null,
                 "rendered": "Simple Form",
+                "type": [Function],
+              },
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <Link
+                  replace={false}
+                  to="/complex-form"
+                >
+                  Complex Form
+                </Link>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Complex Form",
+                  "replace": false,
+                  "to": "/complex-form",
+                },
+                "ref": null,
+                "rendered": "Complex Form",
                 "type": [Function],
               },
               "type": "li",
@@ -247,6 +299,14 @@ ShallowWrapper {
                   Simple Form
                 </Link>
               </li>
+              <li>
+                <Link
+                  replace={false}
+                  to="/complex-form"
+                >
+                  Complex Form
+                </Link>
+              </li>
             </ul>
           </ForwardRef>,
         ],
@@ -297,6 +357,14 @@ ShallowWrapper {
                   Simple Form
                 </Link>
               </li>
+              <li>
+                <Link
+                  replace={false}
+                  to="/complex-form"
+                >
+                  Complex Form
+                </Link>
+              </li>
             </ul>,
           },
           "ref": null,
@@ -320,6 +388,14 @@ ShallowWrapper {
                     to="/simple-form"
                   >
                     Simple Form
+                  </Link>
+                </li>,
+                <li>
+                  <Link
+                    replace={false}
+                    to="/complex-form"
+                  >
+                    Complex Form
                   </Link>
                 </li>,
               ],
@@ -378,6 +454,34 @@ ShallowWrapper {
                   },
                   "ref": null,
                   "rendered": "Simple Form",
+                  "type": [Function],
+                },
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <Link
+                    replace={false}
+                    to="/complex-form"
+                  >
+                    Complex Form
+                  </Link>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "Complex Form",
+                    "replace": false,
+                    "to": "/complex-form",
+                  },
+                  "ref": null,
+                  "rendered": "Complex Form",
                   "type": [Function],
                 },
                 "type": "li",

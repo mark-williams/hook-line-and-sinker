@@ -1,0 +1,778 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`complex-form snapshot renders 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ComplexForm />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <ForwardRef>
+          <label
+            htmlFor="first-name"
+          >
+            First name
+          </label>
+          <input
+            id="first-name"
+            name="firstName"
+            type="text"
+          />
+        </ForwardRef>,
+        <ForwardRef>
+          <label
+            htmlFor="second-name"
+          >
+            Second name
+          </label>
+          <input
+            id="second-name"
+            name="secondName"
+            type="text"
+          />
+        </ForwardRef>,
+        <ForwardRef>
+          <label
+            htmlFor="email"
+          >
+            Email
+          </label>
+          <input
+            id="email"
+            name="email"
+            type="text"
+          />
+        </ForwardRef>,
+        <ForwardRef>
+          <button
+            type="submit"
+          >
+            Submit
+          </button>
+        </ForwardRef>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <label
+              htmlFor="first-name"
+            >
+              First name
+            </label>,
+            <input
+              id="first-name"
+              name="firstName"
+              type="text"
+            />,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "First name",
+              "htmlFor": "first-name",
+            },
+            "ref": null,
+            "rendered": "First name",
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "id": "first-name",
+              "name": "firstName",
+              "type": "text",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+        ],
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bwzfXH",
+            "isStatic": true,
+            "rules": Array [
+              "
+  display: flex;
+  margin-bottom: 0.6rem;
+  label {
+    margin-right: 1rem;
+    width: 7rem;
+  }
+  input {
+    width: 10rem;
+    height: 1.2rem;
+  }
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bwzfXH",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <label
+              htmlFor="second-name"
+            >
+              Second name
+            </label>,
+            <input
+              id="second-name"
+              name="secondName"
+              type="text"
+            />,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Second name",
+              "htmlFor": "second-name",
+            },
+            "ref": null,
+            "rendered": "Second name",
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "id": "second-name",
+              "name": "secondName",
+              "type": "text",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+        ],
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bwzfXH",
+            "isStatic": true,
+            "rules": Array [
+              "
+  display: flex;
+  margin-bottom: 0.6rem;
+  label {
+    margin-right: 1rem;
+    width: 7rem;
+  }
+  input {
+    width: 10rem;
+    height: 1.2rem;
+  }
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bwzfXH",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <label
+              htmlFor="email"
+            >
+              Email
+            </label>,
+            <input
+              id="email"
+              name="email"
+              type="text"
+            />,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Email",
+              "htmlFor": "email",
+            },
+            "ref": null,
+            "rendered": "Email",
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "id": "email",
+              "name": "email",
+              "type": "text",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+        ],
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bwzfXH",
+            "isStatic": true,
+            "rules": Array [
+              "
+  display: flex;
+  margin-bottom: 0.6rem;
+  label {
+    margin-right: 1rem;
+    width: 7rem;
+  }
+  input {
+    width: 10rem;
+    height: 1.2rem;
+  }
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bwzfXH",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <button
+            type="submit"
+          >
+            Submit
+          </button>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Submit",
+            "type": "submit",
+          },
+          "ref": null,
+          "rendered": "Submit",
+          "type": "button",
+        },
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-htpNat",
+            "isStatic": true,
+            "rules": Array [
+              "
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2rem;
+  button {
+    background-color: hsl(112, 52%, 40%);
+    color: white;
+    min-width: 4rem;
+    padding: 0.4em 0.6rem;
+    font-size: 1.4rem;
+    border-radius: 0.4em;
+  }
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-htpNat",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        },
+      },
+    ],
+    "type": Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": true,
+        "rules": Array [
+          "
+  width: 20rem;
+  border: 1px solid hsl(0, 0%, 62%);
+  background-color: hsl(240, 20%, 96%);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+",
+        ],
+      },
+      "displayName": "styled.div",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    },
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <ForwardRef>
+            <label
+              htmlFor="first-name"
+            >
+              First name
+            </label>
+            <input
+              id="first-name"
+              name="firstName"
+              type="text"
+            />
+          </ForwardRef>,
+          <ForwardRef>
+            <label
+              htmlFor="second-name"
+            >
+              Second name
+            </label>
+            <input
+              id="second-name"
+              name="secondName"
+              type="text"
+            />
+          </ForwardRef>,
+          <ForwardRef>
+            <label
+              htmlFor="email"
+            >
+              Email
+            </label>
+            <input
+              id="email"
+              name="email"
+              type="text"
+            />
+          </ForwardRef>,
+          <ForwardRef>
+            <button
+              type="submit"
+            >
+              Submit
+            </button>
+          </ForwardRef>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <label
+                htmlFor="first-name"
+              >
+                First name
+              </label>,
+              <input
+                id="first-name"
+                name="firstName"
+                type="text"
+              />,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "First name",
+                "htmlFor": "first-name",
+              },
+              "ref": null,
+              "rendered": "First name",
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "id": "first-name",
+                "name": "firstName",
+                "type": "text",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+          ],
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bwzfXH",
+              "isStatic": true,
+              "rules": Array [
+                "
+  display: flex;
+  margin-bottom: 0.6rem;
+  label {
+    margin-right: 1rem;
+    width: 7rem;
+  }
+  input {
+    width: 10rem;
+    height: 1.2rem;
+  }
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bwzfXH",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <label
+                htmlFor="second-name"
+              >
+                Second name
+              </label>,
+              <input
+                id="second-name"
+                name="secondName"
+                type="text"
+              />,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Second name",
+                "htmlFor": "second-name",
+              },
+              "ref": null,
+              "rendered": "Second name",
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "id": "second-name",
+                "name": "secondName",
+                "type": "text",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+          ],
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bwzfXH",
+              "isStatic": true,
+              "rules": Array [
+                "
+  display: flex;
+  margin-bottom: 0.6rem;
+  label {
+    margin-right: 1rem;
+    width: 7rem;
+  }
+  input {
+    width: 10rem;
+    height: 1.2rem;
+  }
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bwzfXH",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <label
+                htmlFor="email"
+              >
+                Email
+              </label>,
+              <input
+                id="email"
+                name="email"
+                type="text"
+              />,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Email",
+                "htmlFor": "email",
+              },
+              "ref": null,
+              "rendered": "Email",
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "id": "email",
+                "name": "email",
+                "type": "text",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+          ],
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bwzfXH",
+              "isStatic": true,
+              "rules": Array [
+                "
+  display: flex;
+  margin-bottom: 0.6rem;
+  label {
+    margin-right: 1rem;
+    width: 7rem;
+  }
+  input {
+    width: 10rem;
+    height: 1.2rem;
+  }
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bwzfXH",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <button
+              type="submit"
+            >
+              Submit
+            </button>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Submit",
+              "type": "submit",
+            },
+            "ref": null,
+            "rendered": "Submit",
+            "type": "button",
+          },
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-htpNat",
+              "isStatic": true,
+              "rules": Array [
+                "
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2rem;
+  button {
+    background-color: hsl(112, 52%, 40%);
+    color: white;
+    min-width: 4rem;
+    padding: 0.4em 0.6rem;
+    font-size: 1.4rem;
+    border-radius: 0.4em;
+  }
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-htpNat",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          },
+        },
+      ],
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-bdVaJa",
+          "isStatic": true,
+          "rules": Array [
+            "
+  width: 20rem;
+  border: 1px solid hsl(0, 0%, 62%);
+  background-color: hsl(240, 20%, 96%);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+",
+          ],
+        },
+        "displayName": "styled.div",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "sc-bdVaJa",
+        "target": "div",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      },
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
