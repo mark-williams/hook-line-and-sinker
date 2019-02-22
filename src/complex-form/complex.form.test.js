@@ -1,11 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Form from './complex-form';
-
-const getWrapperByName = (wrapper, name) => wrapper.find(`[name='${name}']`);
-const getValueOfInput = (wrapper, name) => {
-  return wrapper.find(`[name='${name}']`).props().value;
-};
+import { getWrapperByName, getValueOfInput } from '../utils/test-utils';
 
 describe('complex-form', () => {
   describe('snapshot', () => {

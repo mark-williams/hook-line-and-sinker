@@ -1,13 +1,9 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import SimpleForm from './simple-form';
+import { getWrapperByName, getValueOfInput } from '../utils/test-utils';
 
 describe('simple-form', () => {
-  const getWrapperByName = (wrapper, name) => wrapper.find(`[name='${name}']`);
-  const getValueOfInput = (wrapper, name) => {
-    return wrapper.find(`[name='${name}']`).props().value;
-  };
-
   describe('renders input', () => {
     let wrapper;
     beforeEach(() => {
