@@ -28,7 +28,9 @@ ShallowWrapper {
           <input
             id="first-name"
             name="firstName"
+            onChange={[Function]}
             type="text"
+            value=""
           />
         </ForwardRef>,
         <ForwardRef>
@@ -40,7 +42,9 @@ ShallowWrapper {
           <input
             id="second-name"
             name="secondName"
+            onChange={[Function]}
             type="text"
+            value=""
           />
         </ForwardRef>,
         <ForwardRef>
@@ -52,7 +56,9 @@ ShallowWrapper {
           <input
             id="email"
             name="email"
+            onChange={[Function]}
             type="text"
+            value=""
           />
         </ForwardRef>,
         <ForwardRef>
@@ -80,7 +86,9 @@ ShallowWrapper {
             <input
               id="first-name"
               name="firstName"
+              onChange={[Function]}
               type="text"
+              value=""
             />,
           ],
         },
@@ -105,7 +113,9 @@ ShallowWrapper {
             "props": Object {
               "id": "first-name",
               "name": "firstName",
+              "onChange": [Function],
               "type": "text",
+              "value": "",
             },
             "ref": null,
             "rendered": null,
@@ -157,7 +167,9 @@ ShallowWrapper {
             <input
               id="second-name"
               name="secondName"
+              onChange={[Function]}
               type="text"
+              value=""
             />,
           ],
         },
@@ -182,7 +194,9 @@ ShallowWrapper {
             "props": Object {
               "id": "second-name",
               "name": "secondName",
+              "onChange": [Function],
               "type": "text",
+              "value": "",
             },
             "ref": null,
             "rendered": null,
@@ -234,7 +248,9 @@ ShallowWrapper {
             <input
               id="email"
               name="email"
+              onChange={[Function]}
               type="text"
+              value=""
             />,
           ],
         },
@@ -259,7 +275,9 @@ ShallowWrapper {
             "props": Object {
               "id": "email",
               "name": "email",
+              "onChange": [Function],
               "type": "text",
+              "value": "",
             },
             "ref": null,
             "rendered": null,
@@ -398,7 +416,9 @@ ShallowWrapper {
             <input
               id="first-name"
               name="firstName"
+              onChange={[Function]}
               type="text"
+              value=""
             />
           </ForwardRef>,
           <ForwardRef>
@@ -410,7 +430,9 @@ ShallowWrapper {
             <input
               id="second-name"
               name="secondName"
+              onChange={[Function]}
               type="text"
+              value=""
             />
           </ForwardRef>,
           <ForwardRef>
@@ -422,7 +444,9 @@ ShallowWrapper {
             <input
               id="email"
               name="email"
+              onChange={[Function]}
               type="text"
+              value=""
             />
           </ForwardRef>,
           <ForwardRef>
@@ -450,7 +474,9 @@ ShallowWrapper {
               <input
                 id="first-name"
                 name="firstName"
+                onChange={[Function]}
                 type="text"
+                value=""
               />,
             ],
           },
@@ -475,7 +501,9 @@ ShallowWrapper {
               "props": Object {
                 "id": "first-name",
                 "name": "firstName",
+                "onChange": [Function],
                 "type": "text",
+                "value": "",
               },
               "ref": null,
               "rendered": null,
@@ -527,7 +555,9 @@ ShallowWrapper {
               <input
                 id="second-name"
                 name="secondName"
+                onChange={[Function]}
                 type="text"
+                value=""
               />,
             ],
           },
@@ -552,7 +582,9 @@ ShallowWrapper {
               "props": Object {
                 "id": "second-name",
                 "name": "secondName",
+                "onChange": [Function],
                 "type": "text",
+                "value": "",
               },
               "ref": null,
               "rendered": null,
@@ -604,7 +636,9 @@ ShallowWrapper {
               <input
                 id="email"
                 name="email"
+                onChange={[Function]}
                 type="text"
+                value=""
               />,
             ],
           },
@@ -629,7 +663,9 @@ ShallowWrapper {
               "props": Object {
                 "id": "email",
                 "name": "email",
+                "onChange": [Function],
                 "type": "text",
+                "value": "",
               },
               "ref": null,
               "rendered": null,

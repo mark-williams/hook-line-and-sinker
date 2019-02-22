@@ -39,20 +39,52 @@ const FormButtons = styled.div`
 `;
 
 class ComplexForm extends React.Component {
+  state = {
+    values: {
+      firstName: '',
+      secondName: '',
+      email: ''
+    }
+  };
+
+  onChange = e => {
+    const { name, value } = e.target;
+    this.setState({ values: { [name]: value } });
+  };
+
   render = () => {
+    const { values } = this.state;
     return (
       <FormWrapper>
         <FormItem>
           <label htmlFor="first-name">First name</label>
-          <input id="first-name" name="firstName" type="text" />
+          <input
+            id="first-name"
+            name="firstName"
+            type="text"
+            value={values.firstName}
+            onChange={this.onChange}
+          />
         </FormItem>
         <FormItem>
           <label htmlFor="second-name">Second name</label>
-          <input id="second-name" name="secondName" type="text" />
+          <input
+            id="second-name"
+            name="secondName"
+            type="text"
+            value={values.secondName}
+            onChange={this.onChange}
+          />
         </FormItem>
         <FormItem>
           <label htmlFor="email">Email</label>
-          <input id="email" name="email" type="text" />
+          <input
+            id="email"
+            name="email"
+            type="text"
+            value={values.email}
+            onChange={this.onChange}
+          />
         </FormItem>
         <FormButtons>
           <button type="submit">Submit</button>
