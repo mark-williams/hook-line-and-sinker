@@ -1,12 +1,12 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import Form from './complex-form';
 import { getWrapperByName, getValueOfInput } from '../utils/test-utils';
 
 describe('complex-form', () => {
   describe('snapshot', () => {
     it('renders', () => {
-      const wrapper = shallow(<Form />);
+      const wrapper = mount(<Form />);
       expect(wrapper).toMatchSnapshot();
     });
   });
@@ -14,7 +14,7 @@ describe('complex-form', () => {
   describe('controlled inputs', () => {
     let wrapper;
     beforeEach(() => {
-      wrapper = shallow(<Form />);
+      wrapper = mount(<Form />);
     });
 
     describe('firstName', () => {
