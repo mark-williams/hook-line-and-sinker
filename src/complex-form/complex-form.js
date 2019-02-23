@@ -1,61 +1,53 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useState } from 'react';
+import { FormWrapper, FormItem, FormButtons } from './style';
 
-const FormWrapper = styled.div`
-  width: 20rem;
-  border: 1px solid hsl(0, 0%, 62%);
-  background-color: hsl(240, 20%, 96%);
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-`;
+const useForm = () => {
+  const [firstName, setFirstName] = useState('');
+  const [secondName, setSecondName] = useState('');
+  const [email, setEmail] = useState('');
 
-const FormItem = styled.div`
-  display: flex;
-  margin-bottom: 0.6rem;
-  label {
-    margin-right: 1rem;
-    width: 7rem;
-  }
-  input {
-    width: 10rem;
-    height: 1.2rem;
-  }
-`;
+  const onChange = e => {
+    const { name, value } = e.target;
 
-const FormButtons = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 2rem;
-  button {
-    background-color: hsl(112, 52%, 40%);
-    color: white;
-    min-width: 4rem;
-    padding: 0.4em 0.6rem;
-    font-size: 1.4rem;
-    border-radius: 0.4em;
-  }
-`;
+    switch (name) {
+      case 'firstName':
+        setFirstName(value);
+        break;
 
-class ComplexForm extends React.Component {
-  state = {
-    values: {
-      firstName: '',
-      secondName: '',
-      email: ''
+      case 'secondName':
+        setSecondName(value);
+        break;
+
+      case 'email':
+        setEmail(value);
+        break;
+
+      default:
+        break;
     }
   };
 
-  onChange = e => {
-    const { name, value } = e.target;
-    this.setState({ values: { [name]: value } });
+  return {
+    values: {
+      firstName,
+      secondName,
+      email
+    },
+    onChange
+  };
+};
+
+const ComplexForm = () => {
+  const { values, onChange } = useForm();
+
+  const onSubmit = () => {
+    // eslint-disable-next-line no-alert
+    alert('Submitting: ' + JSON.stringify(values, null, 2));
   };
 
-  render = () => {
-    const { values } = this.state;
-    return (
-      <FormWrapper>
+  return (
+    <FormWrapper>
+      <form onSubmit={onSubmit}>
         <FormItem>
           <label htmlFor="first-name">First name</label>
           <input
@@ -63,7 +55,7 @@ class ComplexForm extends React.Component {
             name="firstName"
             type="text"
             value={values.firstName}
-            onChange={this.onChange}
+            onChange={onChange}
           />
         </FormItem>
         <FormItem>
@@ -73,7 +65,7 @@ class ComplexForm extends React.Component {
             name="secondName"
             type="text"
             value={values.secondName}
-            onChange={this.onChange}
+            onChange={onChange}
           />
         </FormItem>
         <FormItem>
@@ -83,15 +75,15 @@ class ComplexForm extends React.Component {
             name="email"
             type="text"
             value={values.email}
-            onChange={this.onChange}
+            onChange={onChange}
           />
         </FormItem>
         <FormButtons>
           <button type="submit">Submit</button>
         </FormButtons>
-      </FormWrapper>
-    );
-  };
-}
+      </form>
+    </FormWrapper>
+  );
+};
 
 export default ComplexForm;
