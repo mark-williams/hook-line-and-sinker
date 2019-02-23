@@ -10,3 +10,6 @@ https://github.com/reactjs/rfcs/issues/71
 
 ## Simple Form
 A (very!) simple form implemented first as a class managing its own state. Then refactored to first use _useState_ for each input element, subsequently refactored to use a custom hook to manage each input generically.
+
+## Complex Form
+Well, not very complex at all! Still a very basic form but this one will eventually have some validation and the intent is to create a custom hook that will mimic the basic features of _Formik_. First step was create the form as a class component and then refactor to a functional component usinf _useState_ for its state management. This was then refactored to bundle this in a custom hook.
