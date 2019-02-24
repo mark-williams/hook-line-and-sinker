@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 export const FormWrapper = styled.div`
   width: 20rem;
   border: 1px solid hsl(0, 0%, 62%);
@@ -9,13 +10,15 @@ export const FormWrapper = styled.div`
 `;
 export const FormItem = styled.div`
   display: flex;
+  flex-direction: column;
   margin-bottom: 0.6rem;
   label {
     margin-right: 1rem;
+    margin-bottom: 0.2rem;
     width: 7rem;
   }
   input {
-    width: 10rem;
+    width: 18rem;
     height: 1.2rem;
   }
 `;
@@ -32,4 +35,8 @@ export const FormButtons = styled.div`
     font-size: 1.4rem;
     border-radius: 0.4em;
   }
+`;
+
+export const ValidationError = styled.div`
+  color: hsl(0, 40%, 50%);
 `;
