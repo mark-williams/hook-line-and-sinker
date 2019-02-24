@@ -69,5 +69,4 @@ const ComplexForm = () => {
   );
 };
 
-export { useForm };
 export default ComplexForm;
