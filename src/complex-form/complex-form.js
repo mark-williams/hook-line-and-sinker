@@ -1,46 +1,29 @@
 import React, { useState } from 'react';
 import { FormWrapper, FormItem, FormButtons } from './style';
 
-const useForm = () => {
-  const [firstName, setFirstName] = useState('');
-  const [secondName, setSecondName] = useState('');
-  const [email, setEmail] = useState('');
+const useForm = initialValues => {
+  const [values, setValues] = useState(initialValues);
 
   const onChange = e => {
     const { name, value } = e.target;
-
-    switch (name) {
-      case 'firstName':
-        setFirstName(value);
-        break;
-
-      case 'secondName':
-        setSecondName(value);
-        break;
-
-      case 'email':
-        setEmail(value);
-        break;
-
-      default:
-        break;
-    }
+    setValues({ ...values, [name]: value });
   };
 
   return {
-    values: {
-      firstName,
-      secondName,
-      email
-    },
+    values,
     onChange
   };
 };
 
 const ComplexForm = () => {
-  const { values, onChange } = useForm();
+  const { values, onChange } = useForm({
+    firstName: '',
+    secondName: '',
+    email: ''
+  });
 
-  const onSubmit = () => {
+  const onSubmit = e => {
+    e.preventDefault();
     // eslint-disable-next-line no-alert
     alert('Submitting: ' + JSON.stringify(values, null, 2));
   };
@@ -86,4 +69,5 @@ const ComplexForm = () => {
   );
 };
 
+export { useForm };
 export default ComplexForm;
