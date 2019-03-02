@@ -19,7 +19,7 @@ const validateForm = values => {
   return errors;
 };
 
-const useForm = (initialValues, validate) => {
+const useForm = (initialValues, validate, onSubmit) => {
   const [values, setValues] = useState(initialValues);
   const [errors, setErrors] = useState({});
 
@@ -33,33 +33,45 @@ const useForm = (initialValues, validate) => {
     setErrors(validationErrors);
   };
 
+  const handleSubmit = e => {
+    const validationErrors = validate(values);
+    if (Object.keys(validationErrors).length === 0) {
+      onSubmit(e);
+    } else {
+      setErrors(validationErrors);
+      e.preventDefault();
+    }
+  };
+
   return {
     values,
     errors,
     onChange,
-    onBlur
+    onBlur,
+    handleSubmit
   };
 };
 
 const ComplexForm = () => {
-  const { values, errors, onChange, onBlur } = useForm(
-    {
-      firstName: '',
-      secondName: '',
-      email: ''
-    },
-    validateForm
-  );
-
   const onSubmit = e => {
     e.preventDefault();
     // eslint-disable-next-line no-alert
     alert('Submitting: ' + JSON.stringify(values, null, 2));
   };
 
+  const { values, errors, onChange, onBlur, handleSubmit } = useForm(
+    {
+      firstName: '',
+      secondName: '',
+      email: ''
+    },
+    validateForm,
+    onSubmit
+  );
+
   return (
     <FormWrapper>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={handleSubmit}>
         <FormItem>
           <label htmlFor="first-name">First name</label>
           <input
