@@ -34,12 +34,12 @@ const useForm = (initialValues, validate, onSubmit) => {
   };
 
   const handleSubmit = e => {
+    e.preventDefault();
     const validationErrors = validate(values);
     if (Object.keys(validationErrors).length === 0) {
-      onSubmit(e);
+      onSubmit(values);
     } else {
       setErrors(validationErrors);
-      e.preventDefault();
     }
   };
 
@@ -53,8 +53,7 @@ const useForm = (initialValues, validate, onSubmit) => {
 };
 
 const ComplexForm = () => {
-  const onSubmit = e => {
-    e.preventDefault();
+  const onSubmit = values => {
     // eslint-disable-next-line no-alert
     alert('Submitting: ' + JSON.stringify(values, null, 2));
   };
