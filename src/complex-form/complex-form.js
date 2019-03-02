@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { FormWrapper, FormItem, FormButtons, ValidationError } from './style';
 
 const validateForm = values => {
@@ -68,6 +68,14 @@ const ComplexForm = () => {
     onSubmit
   );
 
+  const firstNameRef = useRef(null);
+
+  useEffect(() => {
+    if (firstNameRef) {
+      firstNameRef.current.focus();
+    }
+  }, [firstNameRef]);
+
   return (
     <FormWrapper>
       <form onSubmit={handleSubmit}>
@@ -80,6 +88,7 @@ const ComplexForm = () => {
             value={values.firstName}
             onChange={onChange}
             onBlur={onBlur}
+            ref={firstNameRef}
           />
           {errors.firstName && (
             <ValidationError>{errors.firstName}</ValidationError>
