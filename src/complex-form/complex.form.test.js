@@ -47,4 +47,57 @@ describe('complex-form', () => {
       });
     });
   });
+
+  describe('validates on blur', () => {
+    let wrapper;
+    beforeEach(() => {
+      wrapper = mount(<Form />);
+    });
+    describe('when I leave an input with an invalid value', () => {
+      it('should display the validation error', () => {
+        const firstNameWrapper = wrapper.find('#first-name');
+        firstNameWrapper.simulate('blur');
+        expect(
+          wrapper
+            .find('ValidationError')
+            .first()
+            .text()
+        ).toContain('You must enter a first name');
+      });
+    });
+  });
+
+  describe('submission', () => {
+    let wrapper;
+    let submitHandlerMock = jest.fn();
+    beforeEach(() => {
+      wrapper = mount(<Form />);
+      window.alert = submitHandlerMock;
+      submitHandlerMock.mockClear();
+    });
+
+    describe('when valid', () => {
+      it('should submit the form', () => {
+        wrapper
+          .find('#first-name')
+          .simulate('change', { target: { name: 'firstName', value: 'Fred' } });
+        wrapper.find('#second-name').simulate('change', {
+          target: { name: 'secondName', value: 'Bloggs' }
+        });
+        wrapper.find('#email').simulate('change', {
+          target: { name: 'email', value: 'fred@bloggs.com' }
+        });
+
+        wrapper.find('form').simulate('submit');
+        expect(submitHandlerMock).toBeCalled();
+      });
+    });
+
+    describe('when invalid', () => {
+      it('should not submit the form', () => {
+        wrapper.find('form').simulate('submit');
+        expect(submitHandlerMock).not.toBeCalled();
+      });
+    });
+  });
 });
