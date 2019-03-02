@@ -187,7 +187,9 @@ ShallowWrapper {
                 "type": "text",
                 "value": "",
               },
-              "ref": null,
+              "ref": Object {
+                "current": null,
+              },
               "rendered": null,
               "type": "input",
             },
@@ -662,7 +664,9 @@ ShallowWrapper {
                   "type": "text",
                   "value": "",
                 },
-                "ref": null,
+                "ref": Object {
+                  "current": null,
+                },
                 "rendered": null,
                 "type": "input",
               },
