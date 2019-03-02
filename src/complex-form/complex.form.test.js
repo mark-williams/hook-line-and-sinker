@@ -47,4 +47,23 @@ describe('complex-form', () => {
       });
     });
   });
+
+  describe('validates on blur', () => {
+    let wrapper;
+    beforeEach(() => {
+      wrapper = mount(<Form />);
+    });
+    describe('when I leave an input with an invalid value', () => {
+      it('should display the validation error', () => {
+        const firstNameWrapper = wrapper.find('#first-name');
+        firstNameWrapper.simulate('blur');
+        expect(
+          wrapper
+            .find('ValidationError')
+            .first()
+            .text()
+        ).toContain('You must enter a first name');
+      });
+    });
+  });
 });

@@ -8,6 +8,8 @@ export const FormWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `;
+FormWrapper.displayName = 'FormWrapper';
+
 export const FormItem = styled.div`
   display: flex;
   flex-direction: column;
@@ -22,6 +24,8 @@ export const FormItem = styled.div`
     height: 1.2rem;
   }
 `;
+FormItem.displayName = 'FormItem';
+
 export const FormButtons = styled.div`
   display: flex;
   flex-direction: row;
@@ -36,7 +40,9 @@ export const FormButtons = styled.div`
     border-radius: 0.4em;
   }
 `;
+FormButtons.displayName = 'FormButtons';
 
 export const ValidationError = styled.div`
   color: hsl(0, 40%, 50%);
 `;
+ValidationError.displayName = 'ValidationError';
