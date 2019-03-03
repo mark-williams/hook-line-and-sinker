@@ -20,6 +20,14 @@ const validateForm = values => {
   return errors;
 };
 
+const ErrorMessage = ({ name, errors, touched, isSubmitting }) => {
+  if (isSubmitting || (errors[name] && touched[name])) {
+    return <ValidationError>{errors[name]}</ValidationError>;
+  }
+
+  return null;
+};
+
 const ComplexForm = () => {
   const onSubmit = values => {
     // eslint-disable-next-line no-alert
@@ -66,9 +74,12 @@ const ComplexForm = () => {
             onBlur={onBlur}
             ref={firstNameRef}
           />
-          {(isSubmitting || touched.firstName) && errors.firstName && (
-            <ValidationError>{errors.firstName}</ValidationError>
-          )}
+          <ErrorMessage
+            name="firstName"
+            errors={errors}
+            touched={touched}
+            isSubmitting={isSubmitting}
+          />
         </FormItem>
         <FormItem>
           <label htmlFor="second-name">Second name</label>
@@ -80,9 +91,12 @@ const ComplexForm = () => {
             onChange={onChange}
             onBlur={onBlur}
           />
-          {(isSubmitting || touched.secondName) && errors.secondName && (
-            <ValidationError>{errors.secondName}</ValidationError>
-          )}
+          <ErrorMessage
+            name="secondName"
+            errors={errors}
+            touched={touched}
+            isSubmitting={isSubmitting}
+          />
         </FormItem>
         <FormItem>
           <label htmlFor="email">Email</label>
@@ -94,9 +108,12 @@ const ComplexForm = () => {
             onChange={onChange}
             onBlur={onBlur}
           />
-          {(isSubmitting || touched.email) && errors.email && (
-            <ValidationError>{errors.email}</ValidationError>
-          )}
+          <ErrorMessage
+            name="email"
+            errors={errors}
+            touched={touched}
+            isSubmitting={isSubmitting}
+          />
         </FormItem>
         <FormButtons>
           <button type="submit">Submit</button>

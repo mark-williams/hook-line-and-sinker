@@ -12,9 +12,11 @@ const useForm = (initialValues, validate, onSubmit) => {
     setTouched({ ...touched, [name]: true });
   };
 
-  const onBlur = () => {
+  const onBlur = e => {
+    const { name } = e.target;
     const validationErrors = validate(values);
     setErrors(validationErrors);
+    setTouched({ ...touched, [name]: true });
   };
 
   const handleSubmit = e => {
