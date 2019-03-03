@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import useForm from './useForm';
-import { FormWrapper, FormItem, FormButtons, ValidationError } from './style';
+import { FormWrapper, FormItem, FormButtons } from './style';
+import ErrorMessage from './ErrorMessage';
 
 const validateForm = values => {
   const errors = {};
@@ -18,14 +19,6 @@ const validateForm = values => {
   }
 
   return errors;
-};
-
-const ErrorMessage = ({ name, errors, touched, isSubmitting }) => {
-  if (isSubmitting || (errors[name] && touched[name])) {
-    return <ValidationError>{errors[name]}</ValidationError>;
-  }
-
-  return null;
 };
 
 const ComplexForm = () => {
