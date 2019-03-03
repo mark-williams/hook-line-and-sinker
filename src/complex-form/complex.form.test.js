@@ -53,9 +53,12 @@ describe('complex-form', () => {
     beforeEach(() => {
       wrapper = mount(<Form />);
     });
-    describe('when I leave an input with an invalid value', () => {
+    describe('when I touch and leave an input with an invalid value', () => {
       it('should display the validation error', () => {
         const firstNameWrapper = wrapper.find('#first-name');
+        firstNameWrapper.simulate('change', {
+          target: { name: 'firstName', value: '' }
+        });
         firstNameWrapper.simulate('blur');
         expect(
           wrapper

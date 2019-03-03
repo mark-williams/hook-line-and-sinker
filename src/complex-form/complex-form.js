@@ -26,7 +26,7 @@ const ComplexForm = () => {
     alert('Submitting: ' + JSON.stringify(values, null, 2));
   };
 
-  const { values, errors, onChange, onBlur, handleSubmit } = useForm(
+  const { values, errors, touched, onChange, onBlur, handleSubmit } = useForm(
     {
       firstName: '',
       secondName: '',
@@ -58,7 +58,7 @@ const ComplexForm = () => {
             onBlur={onBlur}
             ref={firstNameRef}
           />
-          {errors.firstName && (
+          {touched.firstName && errors.firstName && (
             <ValidationError>{errors.firstName}</ValidationError>
           )}
         </FormItem>
@@ -72,7 +72,7 @@ const ComplexForm = () => {
             onChange={onChange}
             onBlur={onBlur}
           />
-          {errors.secondName && (
+          {touched.secondName && errors.secondName && (
             <ValidationError>{errors.secondName}</ValidationError>
           )}
         </FormItem>
@@ -86,7 +86,9 @@ const ComplexForm = () => {
             onChange={onChange}
             onBlur={onBlur}
           />
-          {errors.email && <ValidationError>{errors.email}</ValidationError>}
+          {touched.email && errors.email && (
+            <ValidationError>{errors.email}</ValidationError>
+          )}
         </FormItem>
         <FormButtons>
           <button type="submit">Submit</button>
