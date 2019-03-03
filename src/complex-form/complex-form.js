@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import useForm from './useForm';
 import { FormWrapper, FormItem, FormButtons } from './style';
-import ErrorMessage from './ErrorMessage';
+import ErrorMessage from './error-message';
 
 const validateForm = values => {
   const errors = {};
