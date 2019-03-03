@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 const useForm = (initialValues, validate, onSubmit) => {
   const [values, setValues] = useState(initialValues);
   const [errors, setErrors] = useState({});
   const [touched, setTouched] = useState({});
+  const isSubmitting = useRef(false);
 
   const onChange = e => {
     const { name, value } = e.target;
@@ -23,6 +24,7 @@ const useForm = (initialValues, validate, onSubmit) => {
       onSubmit(values);
     } else {
       setErrors(validationErrors);
+      isSubmitting.current = true;
     }
   };
   return {
@@ -31,7 +33,8 @@ const useForm = (initialValues, validate, onSubmit) => {
     touched,
     onChange,
     onBlur,
-    handleSubmit
+    handleSubmit,
+    isSubmitting: isSubmitting.current
   };
 };
 

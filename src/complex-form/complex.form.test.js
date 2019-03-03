@@ -97,9 +97,20 @@ describe('complex-form', () => {
     });
 
     describe('when invalid', () => {
-      it('should not submit the form', () => {
+      beforeEach(() => {
         wrapper.find('form').simulate('submit');
+      });
+      it('should not submit the form', () => {
         expect(submitHandlerMock).not.toBeCalled();
+      });
+
+      it('should display validation errors', () => {
+        expect(
+          wrapper
+            .find('ValidationError')
+            .at(1)
+            .text()
+        ).toContain('You must enter a last name');
       });
     });
   });

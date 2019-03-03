@@ -5,15 +5,15 @@ import { FormWrapper, FormItem, FormButtons, ValidationError } from './style';
 const validateForm = values => {
   const errors = {};
 
-  if (values.firstName.length < 1) {
+  if (values.firstName.trim().length < 1) {
     errors.firstName = 'You must enter a first name';
   }
 
-  if (values.secondName.length < 1) {
+  if (values.secondName.trim().length < 1) {
     errors.secondName = 'You must enter a last name';
   }
 
-  if (values.email.length < 1) {
+  if (values.email.trim().length < 1) {
     errors.email = 'You must enter an email address';
   }
 
@@ -26,7 +26,15 @@ const ComplexForm = () => {
     alert('Submitting: ' + JSON.stringify(values, null, 2));
   };
 
-  const { values, errors, touched, onChange, onBlur, handleSubmit } = useForm(
+  const {
+    values,
+    errors,
+    touched,
+    onChange,
+    onBlur,
+    handleSubmit,
+    isSubmitting
+  } = useForm(
     {
       firstName: '',
       secondName: '',
@@ -58,7 +66,7 @@ const ComplexForm = () => {
             onBlur={onBlur}
             ref={firstNameRef}
           />
-          {touched.firstName && errors.firstName && (
+          {(isSubmitting || touched.firstName) && errors.firstName && (
             <ValidationError>{errors.firstName}</ValidationError>
           )}
         </FormItem>
@@ -72,7 +80,7 @@ const ComplexForm = () => {
             onChange={onChange}
             onBlur={onBlur}
           />
-          {touched.secondName && errors.secondName && (
+          {(isSubmitting || touched.secondName) && errors.secondName && (
             <ValidationError>{errors.secondName}</ValidationError>
           )}
         </FormItem>
@@ -86,7 +94,7 @@ const ComplexForm = () => {
             onChange={onChange}
             onBlur={onBlur}
           />
-          {touched.email && errors.email && (
+          {(isSubmitting || touched.email) && errors.email && (
             <ValidationError>{errors.email}</ValidationError>
           )}
         </FormItem>
