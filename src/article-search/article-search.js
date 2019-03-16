@@ -4,12 +4,15 @@ import styled from 'styled-components';
 const Article = styled.div`
   margin-bottom: 0.4rem;
 `;
+Article.displayName = 'Article';
 
 const ArticleSearch = () => {
   const [articles, setArticles] = useState([]);
   useEffect(() => {
     fetch('https://hn.algolia.com/api/v1/search?query=Liverpool')
-      .then(response => response.json())
+      .then(response => {
+        response.json();
+      })
       .then(data => {
         setArticles(data.hits);
       });

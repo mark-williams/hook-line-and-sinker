@@ -25,6 +25,7 @@ ShallowWrapper {
         <h3>
           Here are a list of articles matching your search:
         </h3>,
+        <div />,
       ],
     },
     "ref": null,
@@ -51,6 +52,17 @@ ShallowWrapper {
         "rendered": "Here are a list of articles matching your search:",
         "type": "h3",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [],
+        },
+        "ref": null,
+        "rendered": Array [],
+        "type": "div",
+      },
     ],
     "type": Symbol(react.fragment),
   },
@@ -67,6 +79,7 @@ ShallowWrapper {
           <h3>
             Here are a list of articles matching your search:
           </h3>,
+          <div />,
         ],
       },
       "ref": null,
@@ -92,6 +105,17 @@ ShallowWrapper {
           "ref": null,
           "rendered": "Here are a list of articles matching your search:",
           "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [],
+          },
+          "ref": null,
+          "rendered": Array [],
+          "type": "div",
         },
       ],
       "type": Symbol(react.fragment),
