@@ -29,6 +29,7 @@
   ],
   "devDependencies": {
     "eslint-config-airbnb-es5": "^1.2.0",
-    "eslint-plugin-react": "^7.12.4"
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^1.5.1"
   }
 }

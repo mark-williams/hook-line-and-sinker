@@ -9,6 +9,7 @@
     "node": true,
     "jest": true
   },
+  "plugins": ["react-hooks"],
   "globals": { "Promise": true },
   "settings": {
     "react": {
@@ -20,7 +21,7 @@
       "flowVersion": "0.53" // Flow version
     }
   },
-  // To give you an idea how to override rule options:
+
   "rules": {
     //"quotes": [2, "single"],
     //"eol-last": [2],
@@ -28,10 +29,12 @@
     //"no-underscore-dangle": [0],
     "indent": ["error", 2, { "SwitchCase": 1 }],
 
-    // React-specific
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/forbid-prop-types": [1, { "forbid": ["any"] }],
     "react/no-did-mount-set-state": [0],
-    "react/no-multi-comp": 0
+    "react/no-multi-comp": 0,
+
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   }
 }
