@@ -11,7 +11,7 @@ const ArticleSearch = () => {
   useEffect(() => {
     fetch('https://hn.algolia.com/api/v1/search?query=Liverpool')
       .then(response => {
-        response.json();
+        return response.json();
       })
       .then(data => {
         setArticles(data.hits);
@@ -22,7 +22,7 @@ const ArticleSearch = () => {
     <Fragment>
       <h1>Article Search</h1>
       <h3>Here are a list of articles matching your search:</h3>
-      <div>
+      <div className="articles">
         {articles.map(a => (
           <Article key={a.objectID}>{a.title}</Article>
         ))}

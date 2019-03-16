@@ -25,7 +25,9 @@ ShallowWrapper {
         <h3>
           Here are a list of articles matching your search:
         </h3>,
-        <div />,
+        <div
+          className="articles"
+        />,
       ],
     },
     "ref": null,
@@ -58,6 +60,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [],
+          "className": "articles",
         },
         "ref": null,
         "rendered": Array [],
@@ -79,7 +82,9 @@ ShallowWrapper {
           <h3>
             Here are a list of articles matching your search:
           </h3>,
-          <div />,
+          <div
+            className="articles"
+          />,
         ],
       },
       "ref": null,
@@ -112,6 +117,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [],
+            "className": "articles",
           },
           "ref": null,
           "rendered": Array [],
