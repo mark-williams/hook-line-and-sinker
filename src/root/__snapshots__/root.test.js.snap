@@ -34,6 +34,10 @@ ShallowWrapper {
           />
           <Route
             component={[Function]}
+            path="/data-retrieval"
+          />
+          <Route
+            component={[Function]}
           />
         </Switch>
       </BrowserRouter>,
@@ -59,6 +63,10 @@ ShallowWrapper {
           />
           <Route
             component={[Function]}
+            path="/data-retrieval"
+          />
+          <Route
+            component={[Function]}
           />
         </Switch>,
       },
@@ -80,6 +88,10 @@ ShallowWrapper {
             <Route
               component={[Function]}
               path="/complex-form"
+            />,
+            <Route
+              component={[Function]}
+              path="/data-retrieval"
             />,
             <Route
               component={[Function]}
@@ -130,6 +142,18 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "component": [Function],
+              "path": "/data-retrieval",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
             },
             "ref": null,
             "rendered": null,
@@ -164,6 +188,10 @@ ShallowWrapper {
             />
             <Route
               component={[Function]}
+              path="/data-retrieval"
+            />
+            <Route
+              component={[Function]}
             />
           </Switch>
         </BrowserRouter>,
@@ -189,6 +217,10 @@ ShallowWrapper {
             />
             <Route
               component={[Function]}
+              path="/data-retrieval"
+            />
+            <Route
+              component={[Function]}
             />
           </Switch>,
         },
@@ -210,6 +242,10 @@ ShallowWrapper {
               <Route
                 component={[Function]}
                 path="/complex-form"
+              />,
+              <Route
+                component={[Function]}
+                path="/data-retrieval"
               />,
               <Route
                 component={[Function]}
@@ -249,6 +285,18 @@ ShallowWrapper {
               "props": Object {
                 "component": [Function],
                 "path": "/complex-form",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "path": "/data-retrieval",
               },
               "ref": null,
               "rendered": null,

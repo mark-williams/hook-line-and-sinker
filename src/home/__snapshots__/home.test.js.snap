@@ -51,6 +51,14 @@ ShallowWrapper {
                 Complex Form
               </Link>
             </li>
+            <li>
+              <Link
+                replace={false}
+                to="/data-retrieval"
+              >
+                Data Retrieval
+              </Link>
+            </li>
           </ul>
         </ForwardRef>,
       ],
@@ -109,6 +117,14 @@ ShallowWrapper {
                 Complex Form
               </Link>
             </li>
+            <li>
+              <Link
+                replace={false}
+                to="/data-retrieval"
+              >
+                Data Retrieval
+              </Link>
+            </li>
           </ul>,
         },
         "ref": null,
@@ -140,6 +156,14 @@ ShallowWrapper {
                   to="/complex-form"
                 >
                   Complex Form
+                </Link>
+              </li>,
+              <li>
+                <Link
+                  replace={false}
+                  to="/data-retrieval"
+                >
+                  Data Retrieval
                 </Link>
               </li>,
             ],
@@ -230,6 +254,34 @@ ShallowWrapper {
               },
               "type": "li",
             },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <Link
+                  replace={false}
+                  to="/data-retrieval"
+                >
+                  Data Retrieval
+                </Link>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Data Retrieval",
+                  "replace": false,
+                  "to": "/data-retrieval",
+                },
+                "ref": null,
+                "rendered": "Data Retrieval",
+                "type": [Function],
+              },
+              "type": "li",
+            },
           ],
           "type": "ul",
         },
@@ -307,6 +359,14 @@ ShallowWrapper {
                   Complex Form
                 </Link>
               </li>
+              <li>
+                <Link
+                  replace={false}
+                  to="/data-retrieval"
+                >
+                  Data Retrieval
+                </Link>
+              </li>
             </ul>
           </ForwardRef>,
         ],
@@ -365,6 +425,14 @@ ShallowWrapper {
                   Complex Form
                 </Link>
               </li>
+              <li>
+                <Link
+                  replace={false}
+                  to="/data-retrieval"
+                >
+                  Data Retrieval
+                </Link>
+              </li>
             </ul>,
           },
           "ref": null,
@@ -396,6 +464,14 @@ ShallowWrapper {
                     to="/complex-form"
                   >
                     Complex Form
+                  </Link>
+                </li>,
+                <li>
+                  <Link
+                    replace={false}
+                    to="/data-retrieval"
+                  >
+                    Data Retrieval
                   </Link>
                 </li>,
               ],
@@ -482,6 +558,34 @@ ShallowWrapper {
                   },
                   "ref": null,
                   "rendered": "Complex Form",
+                  "type": [Function],
+                },
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <Link
+                    replace={false}
+                    to="/data-retrieval"
+                  >
+                    Data Retrieval
+                  </Link>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "Data Retrieval",
+                    "replace": false,
+                    "to": "/data-retrieval",
+                  },
+                  "ref": null,
+                  "rendered": "Data Retrieval",
                   "type": [Function],
                 },
                 "type": "li",
