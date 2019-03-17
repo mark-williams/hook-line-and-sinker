@@ -13,6 +13,7 @@ const ArticleSearch = () => {
   const [query, setQuery] = useState('');
 
   useEffect(() => {
+    console.log('Fetching: ' + searchTerm);
     fetch(`https://hn.algolia.com/api/v1/search?query=${searchTerm}`)
       .then(response => response.json())
       .then(data => setArticles(data.hits));
