@@ -16,6 +16,7 @@ const ArticleSearch = () => {
     fetch(`https://hn.algolia.com/api/v1/search?query=${searchTerm}`)
       .then(response => response.json())
       .then(data => setArticles(data.hits));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query]);
 
   const setTerm = e => setSearchTerm(e.target.value);
