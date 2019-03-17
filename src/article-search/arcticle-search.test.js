@@ -26,13 +26,13 @@ describe('article-search', () => {
       })
     );
     beforeEach(() => {
-      // NB have to render twice (see https://github.com/kentcdodds/react-testing-library/issues/215)
-      mount(<ArticleSearch />);
-      wrapper = mount(<ArticleSearch />);
+      act(() => {
+        wrapper = mount(<ArticleSearch />);
+      });
     });
 
-    it('retrieves data', async () => {
-      await expect(global.fetch).toBeCalledWith(
+    it('retrieves data', () => {
+      expect(global.fetch).toBeCalledWith(
         'https://hn.algolia.com/api/v1/search?query=Liverpool'
       );
     });
