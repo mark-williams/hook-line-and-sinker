@@ -15,3 +15,9 @@ A (very!) simple form implemented first as a class managing its own state. Then 
 Well, not very complex at all! Still a very basic form but this one will eventually have some validation and the intent is to create a custom hook that will mimic the basic features of _Formik_. First step was create the form as a class component and then refactor to a functional component using _useState_ for its state management. This was then refactored to bundle this in a custom hook.
 
 Now created a custom hook that mimics _the very basic_ functionality of the brilliant [Formik](https://github.com/jaredpalmer/formik). Tempted to call it _useFormica_ (as it's a cheap imitation!) but, er, didn't!
+
+## Data Retrieval
+Added a simple search component that calls an api and displays the results, using _useEffect_. Currently this is a little contrived, as it uses _useEffect_ to call the api with a default search term on render, and as this sets a term in state, we have to make sure that we don't have that term in the _iseEffect_ dependencies) or we'd get into an infinite loop (ie api resolution sets the state which in turn is a dependency which will fore the _useEffect_ again).
+
+To capture the search term we use another state variable, but as we don't want to query on every change we use _another_, triggered by the search button, to actually trigger the _useEffect_. This means we can't have the query term as a dependency - all fine but the React hooks linter doesn't like this. I'll revisit this.
+
