@@ -22,6 +22,24 @@ ShallowWrapper {
         <h1>
           Article Search
         </h1>,
+        <ForwardRef>
+          <label
+            htmlFor="searchTerm"
+          >
+            Search for:
+          </label>
+          <ForwardRef
+            id="searchTerm"
+            onChange={[Function]}
+            type="text"
+            value="Liverpool"
+          />
+          <ForwardRef
+            onClick={[Function]}
+          >
+            Search
+          </ForwardRef>
+        </ForwardRef>,
         <h3>
           Here are a list of articles matching your search:
         </h3>,
@@ -42,6 +60,148 @@ ShallowWrapper {
         "ref": null,
         "rendered": "Article Search",
         "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <label
+              htmlFor="searchTerm"
+            >
+              Search for:
+            </label>,
+            <ForwardRef
+              id="searchTerm"
+              onChange={[Function]}
+              type="text"
+              value="Liverpool"
+            />,
+            <ForwardRef
+              onClick={[Function]}
+            >
+              Search
+            </ForwardRef>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Search for:",
+              "htmlFor": "searchTerm",
+            },
+            "ref": null,
+            "rendered": "Search for:",
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "id": "searchTerm",
+              "onChange": [Function],
+              "type": "text",
+              "value": "Liverpool",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bwzfXH",
+                "isStatic": true,
+                "rules": Array [
+                  "
+  width: 20rem;
+  height: 2rem;
+  border-radius: 4px;
+  margin-right: 0.6rem;
+  font-size: 1rem;
+  padding-left: 0.5rem;
+",
+                ],
+              },
+              "displayName": "styled.input",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bwzfXH",
+              "target": "input",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            },
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": "Search",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Search",
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-htpNat",
+                "isStatic": true,
+                "rules": Array [
+                  "
+  background-color: hsl(112, 52%, 40%);
+  color: white;
+  min-width: 4rem;
+  padding: 0.5em 0.6rem;
+  font-size: 1rem;
+  border-radius: 0.4em;
+",
+                ],
+              },
+              "displayName": "styled.button",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-htpNat",
+              "target": "button",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            },
+          },
+        ],
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": true,
+            "rules": Array [
+              "
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  label {
+    margin-right: 0.6rem;
+  }
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        },
       },
       Object {
         "instance": null,
@@ -79,6 +239,24 @@ ShallowWrapper {
           <h1>
             Article Search
           </h1>,
+          <ForwardRef>
+            <label
+              htmlFor="searchTerm"
+            >
+              Search for:
+            </label>
+            <ForwardRef
+              id="searchTerm"
+              onChange={[Function]}
+              type="text"
+              value="Liverpool"
+            />
+            <ForwardRef
+              onClick={[Function]}
+            >
+              Search
+            </ForwardRef>
+          </ForwardRef>,
           <h3>
             Here are a list of articles matching your search:
           </h3>,
@@ -99,6 +277,148 @@ ShallowWrapper {
           "ref": null,
           "rendered": "Article Search",
           "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <label
+                htmlFor="searchTerm"
+              >
+                Search for:
+              </label>,
+              <ForwardRef
+                id="searchTerm"
+                onChange={[Function]}
+                type="text"
+                value="Liverpool"
+              />,
+              <ForwardRef
+                onClick={[Function]}
+              >
+                Search
+              </ForwardRef>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Search for:",
+                "htmlFor": "searchTerm",
+              },
+              "ref": null,
+              "rendered": "Search for:",
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "id": "searchTerm",
+                "onChange": [Function],
+                "type": "text",
+                "value": "Liverpool",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bwzfXH",
+                  "isStatic": true,
+                  "rules": Array [
+                    "
+  width: 20rem;
+  height: 2rem;
+  border-radius: 4px;
+  margin-right: 0.6rem;
+  font-size: 1rem;
+  padding-left: 0.5rem;
+",
+                  ],
+                },
+                "displayName": "styled.input",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-bwzfXH",
+                "target": "input",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              },
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "Search",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Search",
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-htpNat",
+                  "isStatic": true,
+                  "rules": Array [
+                    "
+  background-color: hsl(112, 52%, 40%);
+  color: white;
+  min-width: 4rem;
+  padding: 0.5em 0.6rem;
+  font-size: 1rem;
+  border-radius: 0.4em;
+",
+                  ],
+                },
+                "displayName": "styled.button",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-htpNat",
+                "target": "button",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              },
+            },
+          ],
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": true,
+              "rules": Array [
+                "
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  label {
+    margin-right: 0.6rem;
+  }
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          },
         },
         Object {
           "instance": null,
