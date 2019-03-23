@@ -30,9 +30,8 @@ ShallowWrapper {
           </label>
           <ForwardRef
             id="searchTerm"
-            onChange={[Function]}
+            name="searchTerm"
             type="text"
-            value="Liverpool"
           />
           <ForwardRef
             onClick={[Function]}
@@ -74,9 +73,8 @@ ShallowWrapper {
             </label>,
             <ForwardRef
               id="searchTerm"
-              onChange={[Function]}
+              name="searchTerm"
               type="text"
-              value="Liverpool"
             />,
             <ForwardRef
               onClick={[Function]}
@@ -105,11 +103,12 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "id": "searchTerm",
-              "onChange": [Function],
+              "name": "searchTerm",
               "type": "text",
-              "value": "Liverpool",
             },
-            "ref": null,
+            "ref": Object {
+              "current": undefined,
+            },
             "rendered": null,
             "type": Object {
               "$$typeof": Symbol(react.forward_ref),
@@ -247,9 +246,8 @@ ShallowWrapper {
             </label>
             <ForwardRef
               id="searchTerm"
-              onChange={[Function]}
+              name="searchTerm"
               type="text"
-              value="Liverpool"
             />
             <ForwardRef
               onClick={[Function]}
@@ -291,9 +289,8 @@ ShallowWrapper {
               </label>,
               <ForwardRef
                 id="searchTerm"
-                onChange={[Function]}
+                name="searchTerm"
                 type="text"
-                value="Liverpool"
               />,
               <ForwardRef
                 onClick={[Function]}
@@ -322,11 +319,12 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "id": "searchTerm",
-                "onChange": [Function],
+                "name": "searchTerm",
                 "type": "text",
-                "value": "Liverpool",
               },
-              "ref": null,
+              "ref": Object {
+                "current": undefined,
+              },
               "rendered": null,
               "type": Object {
                 "$$typeof": Symbol(react.forward_ref),

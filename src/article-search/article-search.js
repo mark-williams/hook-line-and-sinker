@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useState, useRef } from 'react';
 import styled from 'styled-components';
 import { Button, SearchText, SearchContainer } from './style';
 
@@ -7,21 +7,29 @@ const Article = styled.div`
 `;
 Article.displayName = 'Article';
 
+const DEFAULT_SEARCH = 'Liverpool';
+
 const ArticleSearch = () => {
   const [articles, setArticles] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('Liverpool');
-  const [query, setQuery] = useState('');
+  const inputRef = useRef();
+  const [query, setQuery] = useState(DEFAULT_SEARCH);
 
   useEffect(() => {
-    console.log('Fetching: ' + searchTerm);
-    fetch(`https://hn.algolia.com/api/v1/search?query=${searchTerm}`)
-      .then(response => response.json())
-      .then(data => setArticles(data.hits));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const fetchData = () => {
+      fetch(`https://hn.algolia.com/api/v1/search?query=${query}`)
+        .then(response => response.json())
+        .then(data => setArticles(data.hits));
+    };
+
+    if (inputRef.current.value === '') {
+      inputRef.current.value = DEFAULT_SEARCH;
+    }
+    fetchData();
   }, [query]);
 
-  const setTerm = e => setSearchTerm(e.target.value);
-  const setQueryCall = () => setQuery(searchTerm);
+  const setQueryCall = () => {
+    setQuery(inputRef.current.value);
+  };
 
   return (
     <Fragment>
@@ -30,9 +38,9 @@ const ArticleSearch = () => {
         <label htmlFor="searchTerm">Search for:</label>
         <SearchText
           id="searchTerm"
+          name="searchTerm"
           type="text"
-          value={searchTerm}
-          onChange={setTerm}
+          ref={inputRef}
         />
         <Button onClick={setQueryCall}>Search</Button>
       </SearchContainer>
