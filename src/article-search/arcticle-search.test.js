@@ -1,5 +1,6 @@
 import React from 'react';
 import { act } from 'react-dom/test-utils';
+import { render, fireEvent } from 'react-testing-library';
 import { shallow, mount } from 'enzyme';
 import ArticleSearch from './article-search';
 
@@ -81,22 +82,21 @@ describe('article-search', () => {
       });
     });
 
-    describe.only('when user enters a search term and clicks the button', () => {
+    describe('when user enters a search term and clicks the button', () => {
+      let searchButton;
+      let searchInput;
+
+      beforeEach(() => {
+        const utils = render(<ArticleSearch />);
+        searchButton = utils.getByText('Search');
+        searchInput = utils.getByLabelText('Search for:');
+      });
+
       it('should perform the search using the specified search', () => {
         act(() => {
-          wrapper
-            .find('#searchTerm')
-            .at(0)
-            .simulate('change', { name: 'searchTerm', value: 'Fred' });
-
-          // {
-          //   target: { name: 'searchTerm', value: 'Fred' }
-          // });
-
-          wrapper.find('button').simulate('click');
-          wrapper.update();
+          searchInput.value = 'Fred';
+          fireEvent.click(searchButton);
         });
-
         expect(global.fetch).toBeCalledWith(
           'https://hn.algolia.com/api/v1/search?query=Fred'
         );
