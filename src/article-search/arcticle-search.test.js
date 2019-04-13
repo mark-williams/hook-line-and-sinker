@@ -81,7 +81,7 @@ describe('article-search', () => {
       });
     });
 
-    describe.skip('when user enters a search term and clicks the button', () => {
+    describe.only('when user enters a search term and clicks the button', () => {
       it('should perform the search using the specified search', () => {
         act(() => {
           wrapper
