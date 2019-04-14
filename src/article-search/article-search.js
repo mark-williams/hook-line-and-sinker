@@ -11,14 +11,20 @@ const DEFAULT_SEARCH = 'Liverpool';
 
 const ArticleSearch = () => {
   const [articles, setArticles] = useState([]);
-  const inputRef = useRef();
   const [query, setQuery] = useState(DEFAULT_SEARCH);
+  const inputRef = useRef();
+  const isMountedRef = useRef(false);
+
+  useEffect(() => {
+    isMountedRef.current = true;
+    return () => (isMountedRef.current = false);
+  }, []);
 
   useEffect(() => {
     const fetchData = () => {
       fetch(`https://hn.algolia.com/api/v1/search?query=${query}`)
         .then(response => response.json())
-        .then(data => setArticles(data.hits));
+        .then(data => safelySetArticles(data.hits));
     };
 
     if (inputRef.current.value === '') {
@@ -26,6 +32,12 @@ const ArticleSearch = () => {
     }
     fetchData();
   }, [query]);
+
+  const safelySetArticles = data => {
+    if (isMountedRef.current) {
+      setArticles(data);
+    }
+  };
 
   const setQueryCall = () => {
     setQuery(inputRef.current.value);
